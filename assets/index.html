@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Artsy Photo Gallery</title>
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 10px;
+    }
+    
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s;
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Artsy Photo Gallery</h1>
+  
+  <div class="gallery">
+    <!-- JavaScript loop to generate gallery items -->
+    <script>
+      
+	var imagePaths = [
+	  "paintings/DSCN0828.jpg",
+	  "paintings/DSCN2379.jpg",
+	  "paintings/DSCN0977.jpg",
+	  "paintings/DSCN1274.jpg",
+	  "paintings/DSCN2378.jpg",
+	  "paintings/DSCN2368.jpg",
+	  "paintings/DSCN0769.jpg",
+	  "paintings/DSCN1715.jpg",
+	  "paintings/DSCN1310.jpg",
+	  "paintings/DSCN2369.jpg",
+	  "paintings/DSCN2380.jpg",
+	  "paintings/DSCN2381.jpg",
+	  "paintings/DSCN1786.jpg",
+	  "paintings/DSCN1814.jpg",
+	  "paintings/DSCN1804.jpg",
+	  "paintings/DSCN1794.jpg",
+	  "paintings/DSCN1811.jpg",
+	  "paintings/DSCN1797.jpg",
+	  "paintings/DSCN1796.jpg",
+	  "paintings/DSCN1812.jpg",
+	  "paintings/DSCN2373.jpg",
+	  "paintings/DSCN0835.jpg",
+	  "paintings/DSCN2372.jpg",
+	  "paintings/DSCN2370.jpg",
+	  "paintings/DSCN2371.jpg",
+	  "paintings/DSCN2375.jpg",
+	  "paintings/DSCN2374.jpg",
+	  "paintings/DSCN2376.jpg",
+	  "paintings/DSCN2404.jpg",
+	  "paintings/DSCN0993.jpg",
+	  "paintings/DSCN0831.jpg",
+	  "paintings/DSCN2377.jpg",
+	];
+      var galleryContainer = document.querySelector(".gallery");
+      
+      imagePaths.forEach(function(path) {
+        var galleryItem = document.createElement("div");
+        galleryItem.className = "gallery-item";
+        
+        var image = document.createElement("img");
+        image.src = path;
+        image.alt = "Artsy Photo";
+        
+        galleryItem.appendChild(image);
+        galleryContainer.appendChild(galleryItem);
+      });
+    </script>
+  </div>
+</body>
+</html>
+
