@@ -89,7 +89,7 @@ title: Gallery
         
         var image = document.createElement("img");
         image.src = path;
-        image.alt = "Artsy Photo";
+        image.alt = "Art Photo";
         
         galleryItem.appendChild(image);
         galleryContainer.appendChild(galleryItem);
