@@ -30,10 +30,10 @@ title: Gallery
 {% assign paintings = site.static_files | where_exp: "file", "file.path contains '/assets/paintings'" %}
 
 {% for painting in paintings %}
-	![img]({{ site.github.url }}{{ painting.path }})
+	![img]({{ site.baseurl }}{{ painting.path }})
   <div class="gallery-item">
    <img src="{{ site.github.url }}{{ painting.path | relative_url }}" alt="{{ painting.name }}"/>  
-<p> {{ site.github.url }}{{ painting.path }} </p>
+<p> {{ site.baseurl }}{{ painting.path }} </p>
 </div>
 
 {% endfor %}
