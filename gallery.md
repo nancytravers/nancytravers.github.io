@@ -18,6 +18,12 @@ title: Gallery
 }
 </style>
 {% endraw %}
+{% raw %}
+<div class=gallery-item>
+<img src="/assets/paintings/group.jpg" />
+</div>
+{% endraw %}
+
 
 {% assign paintings = site.static_files | where_exp: "file", "file.path contains '/assets/paintings'" %}
 
