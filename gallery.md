@@ -19,7 +19,7 @@ title: Gallery
 </style>
 {% endraw %}
 {% raw %}
-<img src="./assets/paintings/Chacho.JPG" />
+<img src="./assets/nancy/nancy.JPG" />
 <div class=gallery-item>
 <img src="./assets/paintings/Chacho.JPG" />
 </div>
