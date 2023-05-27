@@ -31,6 +31,7 @@ title: Gallery
 
 {% for painting in paintings %}
   <div class="gallery-item">
+	![](painting.path)
    <img src="{{ painting.path | relative_url }}" alt="{{ painting.name }}">  </div>
 {% endfor %}
 
