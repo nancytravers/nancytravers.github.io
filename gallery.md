@@ -19,9 +19,9 @@ title: Gallery
 </style>
 {% endraw %}
 {% raw %}
-<img src="./assets/nancy/nancy1.JPG" />
+<img src="./assets/nancy/nancy1.JPG" >
 <div class=gallery-item>
-<img src="./assets/paintings/Chacho.JPG" />
+<img src="./assets/paintings/Chacho.JPG" >
 </div>
 {% endraw %}
 
@@ -33,11 +33,12 @@ title: Gallery
 	![img]({{ site.baseurl }}{{ painting.path }})
 {% endfor %}
 
+{% assign paintings = site.static_files | where_exp: "file", "file.path contains '/assets/paintings'" %}
 
-{% for painting in sit.static_files %}
- {% if painting.path contains '/assets/paintings/' %}
-  ![image]({{ painting.path }} 'image')
-	<p> {{ painting.path }} </p>
- {% endif %}
+{% for painting in paintings %}
+  <div class="gallery-item">
+    ![{{ painting.name }}]({{ painting.path | relative_url }})
+  </div>
 {% endfor %}
+
 
