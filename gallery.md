@@ -27,21 +27,17 @@ title: Gallery
   </div>
 {% endfor %}
 
-{% assign paintings = site.static_files | where_exp: "file", "file.path contains '/assets/paintings'" %}
 
 {% for painting in paintings %}
 	![img]({{ site.baseurl }}{{ painting.path }})
-  <div class="gallery-item">
-   <img src="{{ site.github.url }}{{ painting.path | relative_url }}" alt="{{ painting.name }}"/>  
-<p> {{ site.baseurl }}{{ painting.path }} </p>
-</div>
+
 
 {% endfor %}
 {% assign paintings = site.static_files | where_exp: "file", "file.path contains '/assets/paintings'" %}
 
 {% for painting in paintings %}
-  <div class="gallery-item">
-   <img class="gallery-image" src="{{ site.baseurl }}{{ painting.path }}" alt="{{ painting.name }}">
-  </div>
+ {% if image.path contains 'images/folder/' %}
+  ![image]({{ image.path }} 'image')
+ {% endif %}
 {% endfor %}
 
