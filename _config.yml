@@ -17,7 +17,7 @@ title: Nancy Travers
 tagline: Nancy Travers Art 
 description: Beautiful paintings, ceramics, and art from the Pacific Northwest and beyond.
 author: Nancy Travers
-baseurl: '/just-the-class' # the subpath of your site, e.g. /blog
+baseurl: '/' # the subpath of your site, e.g. /blog
 url: 'https://nancytravers.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
 
