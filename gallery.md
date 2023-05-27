@@ -19,12 +19,6 @@ title: Gallery
 </style>
 {% endraw %}
 
-{% capture image_paths %}
-  /path/to/image1.jpg
-  /path/to/image2.jpg
-  /path/to/image3.jpg
-{% endcapture %}
-
 {% assign images = image_paths | strip_newlines | split: '\n' %}
 
 {% for image in images %}
@@ -37,8 +31,7 @@ title: Gallery
 
 {% for painting in paintings %}
   <div class="gallery-item">
-    ![{{ painting.name }}]({{ painting.path | relative_url }})
-  </div>
+   <img src="{{ painting.path | relative_url }}" alt="{{ painting.name }}">  </div>
 {% endfor %}
 
 
