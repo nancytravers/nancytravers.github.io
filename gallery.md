@@ -20,10 +20,11 @@ title: Gallery
 {% endraw %}
 {% raw %}
 <div class=gallery-item>
-<img src="/assets/paintings/group.jpg" />
+<img src="./assets/paintings/group.jpg" />
 </div>
 {% endraw %}
 
+![IMGIMG](https://github.com/nancytravers/nancytravers.github.io/blob/main/assets/paintings/group.jpg)
 
 {% assign paintings = site.static_files | where_exp: "file", "file.path contains '/assets/paintings'" %}
 
