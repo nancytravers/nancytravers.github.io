@@ -25,7 +25,7 @@ title: Gallery
 </div>
 {% endraw %}
 
-![IMGIMG](https://github.com/nancytravers/nancytravers.github.io/blob/main/assets/paintings/group.jpg)
+![IMGIMG](https://github.com/nancytravers/nancytravers.github.io/blob/main/assets/nancy/nancy.JPG)
 
 {% assign paintings = site.static_files | where_exp: "file", "file.path contains '/assets/paintings'" %}
 
