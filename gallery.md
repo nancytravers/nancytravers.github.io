@@ -36,8 +36,8 @@ title: Gallery
 {% assign paintings = site.static_files | where_exp: "file", "file.path contains '/assets/paintings'" %}
 
 {% for painting in paintings %}
- {% if image.path contains 'images/folder/' %}
-  ![image]({{ image.path }} 'image')
+ {% if painting.path contains 'assets/paintings/' %}
+  ![image]({{ painting.path }} 'image')
  {% endif %}
 {% endfor %}
 
