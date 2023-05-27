@@ -4,6 +4,20 @@ title: Gallery
 ---
 
 # Gallery Page
+{% raw %}
+<style>
+.gallery-item {
+  display: inline-block;
+  margin: 10px;
+}
+
+.gallery-item img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+</style>
+{% endraw %}
 
 {% capture image_paths %}
   /path/to/image1.jpg
