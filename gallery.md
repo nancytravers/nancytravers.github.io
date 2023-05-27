@@ -41,7 +41,7 @@ title: Gallery
 
 {% for painting in paintings %}
   <div class="gallery-item">
-    <img src="{{ site.github.url }}{{ painting.path | relative_url }}" alt="{{ painting.name }}">
+   <img class="gallery-image" src="{{ site.baseurl }}{{ painting.path }}" alt="{{ painting.name }}">
   </div>
 {% endfor %}
 
