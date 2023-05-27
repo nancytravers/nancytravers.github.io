@@ -6,6 +6,12 @@ title: Gallery
 # Gallery Page
 {% raw %}
 <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 10px;
+    }
+
 .gallery-item {
   display: inline-block;
   margin: 10px;
@@ -19,34 +25,10 @@ title: Gallery
 </style>
 {% endraw %}
 {% raw %}
-<head>
-  <style>
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      grid-gap: 10px;
-    }
-    
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .gallery-item img {
-      width: 100%;
-      height: auto;
-      transition: transform 0.3s;
-    }
-    
-    .gallery-item:hover img {
-      transform: scale(1.1);
-    }
-  </style>
-</head>
+
 <body>
   
   <div class="gallery">
-    <!-- JavaScript loop to generate gallery items -->
     <script>
       
 	var imagePaths = [
