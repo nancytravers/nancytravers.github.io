@@ -7,4 +7,5 @@ Gemfile.lock
 _site/
 node_modules/
 vendor/
+*.DS_Store
 .DS_Store
