@@ -19,24 +19,15 @@ title: Gallery
 </style>
 {% endraw %}
 
-{% assign images = image_paths | strip_newlines | split: '\n' %}
-
-{% for image in images %}
-  <div class="gallery-item">
-    ![Image]({{ image }})
-  </div>
-{% endfor %}
-
+{% assign paintings = site.static_files | where_exp: "file", "file.path contains '/assets/paintings'" %}
 
 {% for painting in paintings %}
 	![img]({{ site.baseurl }}{{ painting.path }})
-
-
 {% endfor %}
-{% assign paintings = site.static_files | where_exp: "file", "file.path contains '/assets/paintings'" %}
+
 
 {% for painting in sit.static_files %}
- {% if painting.path contains 'assets/paintings/' %}
+ {% if painting.path contains '/assets/paintings/' %}
   ![image]({{ painting.path }} 'image')
 	<p> {{ painting.path }} </p>
  {% endif %}
