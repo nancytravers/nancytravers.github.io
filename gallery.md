@@ -19,3 +19,12 @@ title: Gallery
   </div>
 {% endfor %}
 
+{% assign paintings = site.static_files | where_exp: "file", "file.path contains '/assets/paintings'" %}
+
+{% for painting in paintings %}
+  <div class="gallery-item">
+    ![{{ painting.name }}]({{ painting.path | relative_url }})
+  </div>
+{% endfor %}
+
+
