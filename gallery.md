@@ -85,8 +85,8 @@ title: Gallery
       {% if forloop.index0 | modulo: 2 == 0 %}
 <div class="gallery-item">
   <a href="{{ painting.path | relative_url }}" data-lightbox="gallery" data-title="{{ painting.name }}">
-<a class="lb-close" href="#" onclick="lightbox.end(); return false;">&times;</a>
     <img src="{{ painting.path | relative_url }}" alt="{{ painting.name }}" loading="lazy">
+<a class="lb-close" href="#" onclick="lightbox.end(); return false;">&times;</a>
   </a>
 </div>
 
@@ -100,8 +100,8 @@ title: Gallery
 
 <div class="gallery-item">
   <a href="{{ painting.path | relative_url }}" data-lightbox="gallery" data-title="{{ painting.name }}">
-<a class="lb-close" href="#" onclick="lightbox.end(); return false;">&times;</a>
     <img src="{{ painting.path | relative_url }}" alt="{{ painting.name }}" loading="lazy">
+<a class="lb-close" href="#" onclick="lightbox.end(); return false;">&times;</a>
   </a>
 </div>
       {% endif %}
