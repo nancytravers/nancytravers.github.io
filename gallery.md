@@ -76,4 +76,10 @@ title: Gallery
     {% endfor %}
   </div>
 </div>
+<script>
+  lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true
+  });
+</script>
 
