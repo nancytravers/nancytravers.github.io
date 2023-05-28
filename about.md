@@ -31,9 +31,13 @@ description: >-
 
 {% endraw %}
 
-<div class="banner">
-  <img src="./assets/images/banner.jpg" alt="Banner Image">
-</div>
+{% assign banners = site.static_files | where_exp: "file", "file.path contains '/assets/images/banner'" %}
+
+{% for banner in banners %}
+  <div class="banner">
+    <img src="{{ painting.path | relative_url }}" alt="{{ painting.name }}">
+  </div>
+{% endfor %}
 
 ## About
 
