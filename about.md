@@ -29,7 +29,7 @@ description: >-
 </style>
 
 <div class="banner">
-  <img src="path/to/image.jpg" alt="Banner Image">
+  <img src="assets/images/banner.jpg" alt="Banner Image">
 </div>
 
 {% endraw %}
