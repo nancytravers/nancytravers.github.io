@@ -28,11 +28,12 @@ description: >-
 }
 </style>
 
+
+{% endraw %}
+
 <div class="banner">
   <img src="./assets/images/banner.jpg" alt="Banner Image">
 </div>
-
-{% endraw %}
 
 ## About
 

@@ -8,10 +8,10 @@ title: Gallery
 {% raw %}
 <style>
 .column {
-  width: 50%;
+  width: 75%;
   float: left;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 5;
 }
 
 @media (max-width: 768px) {
@@ -42,6 +42,8 @@ title: Gallery
 
 {% assign paintings = site.static_files | where_exp: "file", "file.path contains '/assets/paintings'" %}
 
+{% assign col2 = site.static_files | where_exp: "file", "file.path contains '/assets/col2'" %}
+
 <div class="gallery">
   <div class="column">
     {% for painting in paintings %}
@@ -54,7 +56,7 @@ title: Gallery
   </div>
   
   <div class="column">
-    {% for painting in paintings %}
+    {% for painting in col2 %}
       {% if forloop.index0 | modulo: 2 != 0 %}
         <div class="gallery-item">
           <img src="{{ painting.path | relative_url }}" alt="{{ painting.name }}">
