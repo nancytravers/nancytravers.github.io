@@ -86,9 +86,10 @@ title: Gallery
 <div class="gallery-item">
   <a href="{{ painting.path | relative_url }}" data-lightbox="gallery" data-title="{{ painting.name }}">
     <img src="{{ painting.path | relative_url }}" alt="{{ painting.name }}" loading="lazy">
-<a class="lb-close" href="#" onclick="lightbox.end(); return false;">&times;</a>
   </a>
+  <a class="lb-close" href="#" onclick="lightbox.end(); return false;">&times;</a>
 </div>
+
 
       {% endif %}
     {% endfor %}
@@ -101,9 +102,10 @@ title: Gallery
 <div class="gallery-item">
   <a href="{{ painting.path | relative_url }}" data-lightbox="gallery" data-title="{{ painting.name }}">
     <img src="{{ painting.path | relative_url }}" alt="{{ painting.name }}" loading="lazy">
-<a class="lb-close" href="#" onclick="lightbox.end(); return false;">&times;</a>
   </a>
+  <a class="lb-close" href="#" onclick="lightbox.end(); return false;">&times;</a>
 </div>
+
       {% endif %}
     {% endfor %}
   </div>
