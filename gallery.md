@@ -46,14 +46,19 @@ title: Gallery
 {% assign paintings = site.static_files | where_exp: "file", "file.path contains '/assets/paintings'" %}
 
 {% assign col2 = site.static_files | where_exp: "file", "file.path contains '/assets/col2'" %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
 <div class="gallery">
   <div class="column">
     {% for painting in paintings %}
       {% if forloop.index0 | modulo: 2 == 0 %}
-        <div class="gallery-item">
-          <img src="{{ painting.path | relative_url }}" alt="{{ painting.name }}">
-        </div>
+<div class="gallery-item">
+  <a href="{{ painting.path | relative_url }}" data-lightbox="gallery" data-title="{{ painting.name }}">
+    <img src="{{ painting.path | relative_url }}" alt="{{ painting.name }}" loading="lazy">
+  </a>
+</div>
+
       {% endif %}
     {% endfor %}
   </div>
@@ -61,9 +66,12 @@ title: Gallery
   <div class="column">
     {% for painting in col2 %}
       {% if forloop.index0 | modulo: 2 != 0 %}
-        <div class="gallery-item">
-          <img src="{{ painting.path | relative_url }}" alt="{{ painting.name }}">
-        </div>
+
+<div class="gallery-item">
+  <a href="{{ painting.path | relative_url }}" data-lightbox="gallery" data-title="{{ painting.name }}">
+    <img src="{{ painting.path | relative_url }}" alt="{{ painting.name }}" loading="lazy">
+  </a>
+</div>
       {% endif %}
     {% endfor %}
   </div>
