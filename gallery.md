@@ -27,12 +27,21 @@ title: Gallery
 }
 
 .gallery-item {
-  width: 75%;
   margin-bottom: 10px;
   display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
   padding: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+    
+.gallery-item:hover img {
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
