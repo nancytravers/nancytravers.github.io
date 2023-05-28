@@ -18,58 +18,19 @@ description: >-
 
 ## About
 
-Nancy Travers is an artist, painter, former ceramics teacher at Clackamas Community College, and Oregon native.
-{% raw %}
-<head>
-  <style>
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      grid-gap: 10px;
-    }
-    
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .gallery-item img {
-      width: 100%;
-      height: auto;
-      transition: transform 0.3s;
-    }
-    
-    .gallery-item:hover img {
-      transform: scale(1.1);
-    }
-  </style>
-</head>
-<body>
-  
-  <div class="gallery">
-    <!-- JavaScript loop to generate gallery items -->
-    <script>
-      
-	var imagePaths = [
-	"./assets/nancy/nancy.JPG",
+Nancy Travers, a renowned Oregon painter, has left an indelible mark on the artistic landscape with her captivating works. With a passion for ceramics and watercolors, Nancy dedicated an impressive 25 years of her career teaching these art forms at Clackamas Community College. Her expertise lies in both thrown work and hand building techniques, showcasing her versatility and deep understanding of her craft.
 
+Drawing inspiration from her extensive travels across Europe and Mexico, Nancy's artwork reflects the vibrant cultures and breathtaking landscapes she has encountered. Her explorations in these regions, often supplemented by sabbatical leaves dedicated to immersive study in Mexico, have greatly influenced her artistic style and vision.
 
-	];
-      var galleryContainer = document.querySelector(".gallery");
-      
-      imagePaths.forEach(function(path) {
-        var galleryItem = document.createElement("div");
-        galleryItem.className = "gallery-item";
-        
-        var image = document.createElement("img");
-        image.src = path;
-        image.alt = "Artsy Photo";
-        
-        galleryItem.appendChild(image);
-        galleryContainer.appendChild(galleryItem);
-      });
-    </script>
+Nancy's paintings encompass a wide range of subjects, with a focus on people, landscapes, and the beauty of nature. Working primarily with watercolor and acrylic, she skillfully captures the essence and spirit of her subjects, creating captivating portraits that evoke a sense of emotion and connection.
+
+Throughout her artistic journey, Nancy Travers continues to inspire and engage viewers with her masterful use of color, composition, and technique. Her dedication to her craft and her ability to convey the intricacies of life through her art make her a revered figure in the Oregon art community and beyond.
+
+{% assign paintings = site.static_files | where_exp: "file", "file.path contains '/assets/nancy'" %}
+
+{% for painting in paintings %}
+  <div class="gallery-item">
+    <img src="{{ painting.path | relative_url }}" alt="{{ painting.name }}">
   </div>
-</body>
-{% endraw %}
+{% endfor %}
 
