@@ -27,7 +27,7 @@ title: Gallery
 }
 
 .gallery-item {
-  width: 65%;
+  width: 75%;
   margin-bottom: 10px;
   display: inline-block;
   vertical-align: top;
@@ -79,7 +79,14 @@ title: Gallery
 <script>
   lightbox.option({
     'resizeDuration': 200,
-    'wrapAround': true
+    'wrapAround': true,
+    'showImageNumberLabel': false, // Optional: Hide the image number label
+    'disableScrolling': true, // Optional: Disable scrolling when the pop-up is open
+    'alwaysShowNavOnTouchDevices': true, // Optional: Show navigation buttons on touch devices
+    'albumLabel': 'Image %1 of %2', // Optional: Customize the album label
+    'fadeDuration': 300, // Optional: Customize the fade-in/out duration
+    'closeButtonCaption': '&times;', // Custom close button caption ('&times;' is the HTML code for 'x')
   });
 </script>
+
 
