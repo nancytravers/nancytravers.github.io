@@ -113,10 +113,28 @@ title: Gallery
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  var gallery = new PhotoSwipe('.gallery', PhotoSwipeUI_Default);
+  var galleryElements = document.querySelectorAll('.gallery-item');
+  var galleryItems = [];
+
+  Array.prototype.forEach.call(galleryElements, function(element) {
+    var imageLink = element.querySelector('a');
+    var size = imageLink.getAttribute('data-size').split('x');
+    var item = {
+      src: imageLink.getAttribute('href'),
+      w: parseInt(size[0], 10),
+      h: parseInt(size[1], 10)
+    };
+    galleryItems.push(item);
+  });
+
+  var gallery = new PhotoSwipe(document.querySelector('.gallery'), PhotoSwipeUI_Default, galleryItems, {
+    index: 0 // Set the initial image index if needed
+  });
+
   gallery.init();
 });
 </script>
+
 
 
 
