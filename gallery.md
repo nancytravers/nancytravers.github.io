@@ -48,6 +48,27 @@ title: Gallery
   .gallery-item {
     width: 100%;
   }
+
+.lb-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 30px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.lb-close:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 }
 </style>
 {% endraw %}
@@ -89,8 +110,8 @@ title: Gallery
   lightbox.option({
     'resizeDuration': 200,
     'wrapAround': true,
-    'showImageNumberLabel': false, // Optional: Hide the image number label
-    'disableScrolling': true, // Optional: Disable scrolling when the pop-up is open
+    'showImageNumberLabel': false, 
+    'disableScrolling': true, 
     'alwaysShowNavOnTouchDevices': true, // Optional: Show navigation buttons on touch devices
     'albumLabel': 'Image %1 of %2', // Optional: Customize the album label
     'fadeDuration': 300, // Optional: Customize the fade-in/out duration
