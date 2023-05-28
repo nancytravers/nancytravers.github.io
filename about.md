@@ -2,8 +2,25 @@
 layout: page
 title: About
 description: >-
-    Course policies and information.
+	About Nancy Travers.
 ---
+{% raw %}
+<style>
+.banner {
+  text-align: center;
+}
+
+.banner img {
+  width: 100%;
+  max-height: 300px; 
+}
+</style>
+
+<div class="banner">
+  <img src="path/to/image.jpg" alt="Banner Image">
+</div>
+
+{% endraw %}
 
 # About
 {:.no_toc}
