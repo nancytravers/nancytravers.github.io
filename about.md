@@ -35,13 +35,13 @@ description: >-
 
 {% for banner in banners %}
   <div class="banner">
-    <img src="{{ painting.path | relative_url }}" alt="{{ painting.name }}">
+    <img src="{{ banner.path | relative_url }}" alt="{{ banner.name }}">
   </div>
 {% endfor %}
 
 ## About
 
-Nancy Travers, a renowned Oregon painter, has left an indelible mark on the artistic landscape with her captivating works. With a passion for ceramics and watercolors, Nancy dedicated an impressive 25 years of her career teaching these art forms at Clackamas Community College. Her expertise lies in both thrown work and hand building techniques, showcasing her versatility and deep understanding of her craft.
+Nancy Travers, a renowned Oregon painter and native Oregonian, has left an indelible mark on the artistic landscape with her captivating works. With a passion for ceramics and watercolors, Nancy dedicated an impressive 25 years of her career teaching these art forms at Clackamas Community College. Her expertise lies in both thrown work and hand building techniques, showcasing her versatility and deep understanding of her craft.
 
 Drawing inspiration from her extensive travels across Europe and Mexico, Nancy's artwork reflects the vibrant cultures and breathtaking landscapes she has encountered. Her explorations in these regions, often supplemented by sabbatical leaves dedicated to immersive study in Mexico, have greatly influenced her artistic style and vision.
 

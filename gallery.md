@@ -8,10 +8,9 @@ title: Gallery
 {% raw %}
 <style>
 .column {
-  width: 75%;
-  float: left;
+  width: 50%;
   box-sizing: border-box;
-  padding: 5;
+  padding: 10px;
 }
 
 @media (max-width: 768px) {
@@ -23,13 +22,17 @@ title: Gallery
 
 .gallery {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .gallery-item {
   width: 45%;
   margin-bottom: 20px;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 @media (max-width: 768px) {
