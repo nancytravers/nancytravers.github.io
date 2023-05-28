@@ -8,9 +8,9 @@ title: Gallery
 {% raw %}
 <style>
 .column {
-  width: 50%;
+  width: 70%;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 5px;
 }
 
 @media (max-width: 768px) {
@@ -27,8 +27,8 @@ title: Gallery
 }
 
 .gallery-item {
-  width: 45%;
-  margin-bottom: 20px;
+  width: 65%;
+  margin-bottom: 10px;
   display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
