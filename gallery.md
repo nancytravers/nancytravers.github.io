@@ -8,7 +8,7 @@ title: Gallery
 {% raw %}
 <style>
 .column {
-  width: 70%;
+  width: 50%;
   box-sizing: border-box;
   padding: 5px;
 }
@@ -50,7 +50,7 @@ title: Gallery
 <div class="gallery">
   <div class="column">
     {% for painting in paintings %}
-      ``` {% if forloop.index0 | modulo: 2 == 0 %} ```
+      {% if forloop.index0 | modulo: 2 == 0 %}
         <div class="gallery-item">
           <img src="{{ painting.path | relative_url }}" alt="{{ painting.name }}">
         </div>
@@ -60,7 +60,7 @@ title: Gallery
   
   <div class="column">
     {% for painting in col2 %}
-      ```{% if forloop.index0 | modulo: 2 != 0 %} ```
+      {% if forloop.index0 | modulo: 2 != 0 %}
         <div class="gallery-item">
           <img src="{{ painting.path | relative_url }}" alt="{{ painting.name }}">
         </div>
