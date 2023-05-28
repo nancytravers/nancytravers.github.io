@@ -4,6 +4,18 @@ title: About
 description: >-
 	About Nancy Travers.
 ---
+
+
+# About
+{:.no_toc}
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
 {% raw %}
 <style>
 .banner {
@@ -21,17 +33,6 @@ description: >-
 </div>
 
 {% endraw %}
-
-# About
-{:.no_toc}
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
----
 
 ## About
 
