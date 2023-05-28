@@ -5,6 +5,7 @@ title: Gallery
 
 # Gallery Page
 {% raw %}
+<style>
 .column {
   width: 50%;
   float: left;
@@ -35,7 +36,7 @@ title: Gallery
     width: 100%;
   }
 }
-
+</style>
 {% endraw %}
 
 
