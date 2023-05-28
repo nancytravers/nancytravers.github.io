@@ -4,6 +4,7 @@ title: Gallery
 ---
 
 # Gallery Page
+
 {% raw %}
 <style>
 .column {
@@ -39,14 +40,12 @@ title: Gallery
 </style>
 {% endraw %}
 
-
 {% assign paintings = site.static_files | where_exp: "file", "file.path contains '/assets/paintings'" %}
-
 
 <div class="gallery">
   <div class="column">
     {% for painting in paintings %}
-      {% if forloop.index % 2 == 1 %}
+      {% if forloop.index0 | modulo: 2 == 0 %}
         <div class="gallery-item">
           <img src="{{ painting.path | relative_url }}" alt="{{ painting.name }}">
         </div>
@@ -56,7 +55,7 @@ title: Gallery
   
   <div class="column">
     {% for painting in paintings %}
-      {% if forloop.index % 2 == 0 %}
+      {% if forloop.index0 | modulo: 2 != 0 %}
         <div class="gallery-item">
           <img src="{{ painting.path | relative_url }}" alt="{{ painting.name }}">
         </div>
@@ -66,10 +65,12 @@ title: Gallery
 </div>
 
 ```
+/*
 #{% for painting in paintings %}
 #  <div class="gallery-item">
 #    <img src="{{ painting.path | relative_url }}" alt="{{ painting.name }}">
 #  </div>
 #{% endfor %}
+*/
 ```
 
