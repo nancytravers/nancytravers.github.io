@@ -99,5 +99,21 @@ title: Gallery
 </body>
 {% endraw %}
 
+{% assign paintings = site.static_files | where_exp: "file", "file.path contains '/assets/paintings'" %}
+
+{% for painting in paintings %}
+  <div class="gallery-item">
+    ![{{ painting.name }}]({{ painting.path | relative_url }})
+  </div>
+{% endfor %}
+
+{% assign paintings = site.static_files | where_exp: "file", "file.path contains '/assets/paintings'" %}
+
+{% for painting in paintings %}
+  <div class="gallery-item">
+    <img src="{{ painting.path | relative_url }}" alt="{{ painting.name }}">
+  </div>
+{% endfor %}
+
 
 
