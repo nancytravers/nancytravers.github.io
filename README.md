@@ -21,18 +21,15 @@ seo:
 }
 </style>
 
-<div class="banner">
-  <img src="path/to/image.jpg" alt="Banner Image">
-</div>
 
 {% endraw %}
 
-{% assign banners = site.static_files | where_exp: "file", "file.path contains '/ass    ets/images/banner'" %}
- 
+{% assign banners = site.static_files | where_exp: "file", "file.path contains '/assets/images/banner'" %}
+
 {% for banner in banners %}
-	<div class="banner">
-		<img src="{{ banner.path | relative_url }}" alt="{{ banner.name }}">
-	</div>
+  <div class="banner">
+    <img src="{{ banner.path | relative_url }}" alt="{{ banner.name }}">
+  </div>
 {% endfor %}
 Nancy Travers, a renowned Oregon painter, has left an indelible mark on the artistic landscape with her captivating works. With a passion for ceramics and watercolors, Nancy dedicated an impressive 25 years of her career teaching these art forms at Clackamas Community College. Her expertise lies in both thrown work and hand building techniques, showcasing her versatility and deep understanding of her craft.
 
