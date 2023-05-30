@@ -27,8 +27,13 @@ seo:
 
 {% endraw %}
 
-## About
-
+{% assign banners = site.static_files | where_exp: "file", "file.path contains '/ass    ets/images/banner'" %}
+ 
+{% for banner in banners %}
+	<div class="banner">
+		<img src="{{ banner.path | relative_url }}" alt="{{ banner.name }}">
+	</div>
+{% endfor %}
 Nancy Travers, a renowned Oregon painter, has left an indelible mark on the artistic landscape with her captivating works. With a passion for ceramics and watercolors, Nancy dedicated an impressive 25 years of her career teaching these art forms at Clackamas Community College. Her expertise lies in both thrown work and hand building techniques, showcasing her versatility and deep understanding of her craft.
 
 Drawing inspiration from her extensive travels across Europe and Mexico, Nancy's artwork reflects the vibrant cultures and breathtaking landscapes she has encountered. Her explorations in these regions, often supplemented by sabbatical leaves dedicated to immersive study in Mexico, have greatly influenced her artistic style and vision.
