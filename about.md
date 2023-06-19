@@ -2,7 +2,7 @@
 layout: page
 title: About
 description: >-
-	About Nancy Travers.
+	About Nancy Travers' life and artwork.
 ---
 
 
